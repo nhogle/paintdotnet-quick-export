@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <AssemblyName>QuickExportPatcher</AssemblyName>
+    <RootNamespace>PaintDotNet.QuickExport.Patcher</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dnlib" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PaintDotNet.QuickExport\PaintDotNet.QuickExport.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(OutputPath)PaintDotNet.QuickExport.dll" Condition="Exists('$(OutputPath)PaintDotNet.QuickExport.dll')">
+      <LogicalName>PaintDotNet.QuickExport.dll</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

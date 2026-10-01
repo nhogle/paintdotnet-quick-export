@@ -1,0 +1,31 @@
+<Project>
+  <PropertyGroup>
+    <!-- Version Configuration -->
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+
+    <!-- Product & Author Metadata -->
+    <Authors>Nick Hogle</Authors>
+    <Company>Nick Hogle</Company>
+    <Product>Paint.NET Quick Export</Product>
+    <Copyright>Copyright (c) 2026 Nick Hogle</Copyright>
+
+    <!-- Deterministic source path mapping -->
+    <Deterministic>true</Deterministic>
+    <PathMap>$(MSBuildThisFileDirectory)=/_/</PathMap>
+
+    <!-- Unified root output directory (2 levels deep: bin/Debug and bin/Release) -->
+    <OutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+
+    <!-- Route all intermediate compiler files to root obj/<ProjectName>/ -->
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+
+    <!-- Embed debug symbols directly into binaries (no loose .pdb files generated) -->
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+</Project>

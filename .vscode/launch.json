@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "QuickExportPatcher (Debug)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Build (Debug)",
+      "program": "${workspaceFolder}/bin/Debug/QuickExportPatcher.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    },
+    {
+      "name": "QuickExportPatcher (Release)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Build (Release)",
+      "program": "${workspaceFolder}/bin/Release/QuickExportPatcher.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    }
+  ]
+}
+
